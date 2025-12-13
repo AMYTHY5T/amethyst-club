@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amethyst Club</title>
+
+  <!-- Global SEO / Social -->
+  <meta name="description" content="Amethyst Club — A student-led medical community shaping future leaders through knowledge, impact, and service." />
+  <meta property="og:title" content="Amethyst Club" />
+  <meta property="og:description" content="Shaping Future Medical Leaders" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= WORLD-CLASS DESIGN SYSTEM ================= */
+    :root {
+      --bg: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --accent: #6b5ae0;
+      --line: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: transparent;
+      color: var(--ink);
+      line-height: 1.7;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ensure content stays above atmospheric blobs */
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    
+    /* ================= HERO ================= */
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .hero {
+      position: relative;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .brand-mark {
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-weight: 800;
+      letter-spacing: 0.35em;
+      color: var(--ink);
+      margin-bottom: 14px;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .brand-tagline {
+      font-size: 0.9rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 42px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+      animation-delay: .15s;
+    }
+
+        }
+
+    .brand-tagline {
+      font-size: 0.9rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 42px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      font-weight: 700;
+      letter-spacing: -1.8px;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 760px;
+      margin: 0 auto 56px;
+      color: var(--muted);
+    }
+
+    .hero .cta-main {
+      display: inline-block;
+      padding: 18px 52px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      box-shadow: 0 14px 36px rgba(107,90,224,.4);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .hero .cta-main:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 52px rgba(107,90,224,.55);
+    }
+
+    /* ================= IMPACT ================= */
+    section {
+      padding: 140px 20px;
+      border-top: none;
+      background: transparent;
+    }
+
+    .impact {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      gap: 70px;
+      text-align: center;
+    }
+
+    /* Mobile: stacked */
+    @media (max-width: 600px) {
+      .impact {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Tablet: 2 columns – prevent empty gap with 3 items */
+    @media (min-width: 601px) and (max-width: 991px) {
+      .impact {
+        grid-template-columns: repeat(2, 280px);
+        justify-content: center;
+      }
+
+      /* make the last stat span full row to avoid ghost column */
+      .impact > div:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+      }
+
+    }
+
+    /* Desktop and up: EXACTLY 3 columns, centered */
+    @media (min-width: 992px) {
+      .impact {
+        grid-template-columns: repeat(3, 280px);
+        justify-content: center;
+      }
+    }
+
+    .impact h2 {
+      font-size: clamp(3.2rem, 5vw, 4.5rem);
+      color: var(--accent);
+      margin-bottom: 14px;
+      letter-spacing: -1px;
+    }
+
+    .impact p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* ================= STATEMENT ================= */
+    .statement {
+      max-width: 960px;
+      margin: auto;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      line-height: 1.35;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* ================= ACTIVITIES (STORYTELLING) ================= */
+    .activities {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .activities h3 {
+      font-size: 2.2rem;
+      margin-bottom: 22px;
+    }
+
+    .activities p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 28px;
+    }
+
+    .activities a {
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+          100% { background-position: -200% 0; }
+    }
+
+    /* ================= CTA ================= */
+    .cta {
+      text-align: center;
+    }
+
+    .cta-links {
+      margin-top: 48px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .cta-links a {
+      padding: 14px 34px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+
+    /* Hover / Active – platform colors only on interaction */
+    .cta-links a#ctaInstagram:hover,
+    .cta-links a#ctaInstagram:active {
+      background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+    }
+
+    .cta-links a#ctaTiktok:hover,
+    .cta-links a#ctaTiktok:active {
+      background: #000000;
+    }
+
+    .cta-links a#ctaMail:hover,
+    .cta-links a#ctaMail:active {
+      background: #ea4335;
+    }
+
+    .cta-links a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(15,23,42,.25);
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      padding: 70px 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+
+    /* ================= LANGUAGE ================= */
+    .lang-switch {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+
+    .lang-switch button {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .activities {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .activity-placeholder {
+        height: 220px;
+        margin-top: 40px;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+<div class="lang-switch">
+  <button onclick="toggleLang()">EN</button>
+</div>
+
+<header>
+  <div class="hero">
+    <div class="brand-mark">AMETHYST</div>
+    <div class="brand-tagline">SHINE IN HEALING</div>
+    <h1 id="heroTitle">نصنع قادة الطب<br>لا مجرد طلبة</h1>
+    <p id="heroText">Amethyst Club هو مجتمع طلابي طبي يقوده الطلبة، ويؤمن بأن المعرفة، التأثير، والخدمة هي أساس التغيير الحقيقي.</p>
+    <a href="#impact" class="cta-main" id="heroBtn">اكتشف أثرنا</a>
+  </div>
+</header>
+
+<section id="impact">
+  <div class="impact">
+    <div><h2>+10</h2><p id="i1">نشاط علمي وثقافي وتطبيقي</p></div>
+    <div><h2>+50</h2><p id="i2">طالب مستفيد</p></div>
+    <div><h2>+2</h2><p id="i3">حملة توعوية</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="statement" id="statementText">
+    لسنا ناديًا يشرح الطب فقط، بل مساحة تصنع الوعي، المسؤولية، والإنسان قبل الطبيب.
+  </div>
+</section>
+
+<section>
+  <div class="activities">
+    <div>
+      <h3 id="actTitle">التعلّم خارج القاعات</h3>
+      <p id="actText">أنشطتنا ليست محاضرات تقليدية، بل تجارب حقيقية تربط المعرفة بالواقع، وتبني شخصية الطبيب قبل مهاراته.</p>
+      <a href="activities.html" id="actLink">استكشف الأنشطة →</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2 id="ctaTitle">كن جزءًا من التجربة</h2>
+  <div class="cta-links">
+    <a href="https://www.instagram.com/amethyst__club/" target="_blank" id="ctaInstagram">Instagram</a>
+    <a href="https://www.tiktok.com/@amethyst__club" target="_blank" id="ctaTiktok">TikTok</a>
+    <a href="https://mail.google.com/mail/?view=cm&to=amethystclub18@gmail.com" target="_blank" id="ctaMail">Email</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Amethyst Club — All rights reserved
+</footer>
+
+<script>
+  let isArabic = true;
+  function toggleLang() {
+    if (isArabic) {
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+      document.querySelector('.brand-mark').innerText = 'AMETHYST';
+      document.querySelector('.brand-tagline').innerText = 'SHINE IN HEALING';
+      heroTitle.innerHTML = 'Shaping Future Medical Leaders';
+      heroText.innerText = 'Amethyst Club is a student-led medical community driven by knowledge, impact, and service.';
+      heroBtn.innerText = 'Discover Our Impact';
+      i1.innerText = 'Scientific, cultural & practical activities';
+      i2.innerText = 'Students impacted';
+      i3.innerText = 'Awareness campaign';
+      statementText.innerText = 'We are not just a club that teaches medicine, but a space that builds awareness, responsibility, and the human before the doctor.';
+      actTitle.innerText = 'Learning beyond classrooms';
+      actText.innerText = 'Our activities are real experiences that connect theory to practice and shape the physician before the skills.';
+      actLink.innerText = 'Explore activities →';
+      ctaTitle.innerText = 'Be part of the experience';
+      isArabic = false;
+    } else {
+      location.reload();
+    }
+  }
+</script>
+
+</body>
+</html>
