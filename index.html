@@ -4,43 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ===== GLOBAL SEO (WORLD‑CLASS) ===== -->
-  <title>Amethystclub</title>
+  <!-- ===== GLOBAL SEO ===== -->
+  <title>Amethyst Club | Student Medical Club in Algeria</title>
 
-  <!-- Favicon (Tab Icon) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-  <meta name="description" content="Amethystclub — Student‑led medical club shaping future leaders through science, awareness, and humanitarian impact." />
-  <meta name="keywords" content="Amethystclub, medical club, student medical club, health awareness, Algeria" />
-  <meta name="robots" content="index, follow" />
 
-  <!-- Google Search Console Verification -->
+  <meta name="description" content="Amethyst Club — نادي طلابي طبي يقوده الطلبة، يهدف لصناعة قادة المستقبل عبر العلم، التوعية الصحية، والعمل الإنساني في الجزائر." />
+  <meta name="keywords" content="Amethyst Club, medical club, student medical club, health awareness, Algeria" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://amethystclub.github.io/" />
+
+  <!-- Google Search Console (DO NOT TOUCH) -->
   <meta name="google-site-verification" content="KVSVxCnRlR9q5j0cW4k0QfZcPaF4s-FUCz0FBE1ozqs" />
 
-  <!-- Open Graph (Social / Discover) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Amethystclub" />
-  <meta property="og:description" content="Shaping Future Medical Leaders" />
-  <meta property="og:site_name" content="Amethystclub" />
+  <meta property="og:title" content="Amethyst Club" />
+  <meta property="og:description" content="Student-led medical club shaping future leaders through science and service." />
+  <meta property="og:site_name" content="Amethyst Club" />
   <meta property="og:image" content="https://amethystclub.github.io/images/og-cover.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Amethyst Club" />
+  <meta name="twitter:description" content="Student-led medical club creating real impact." />
   <meta name="twitter:image" content="https://amethystclub.github.io/images/og-cover.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Amethystclub" />
-  <meta name="twitter:description" content="Student‑led medical club creating impact through science and service." />
-
-  <!-- Performance -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
-  <!-- ===== STRUCTURED DATA (SEO SNIPPETS) ===== -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Amethystclub",
+    "name": "Amethyst Club",
     "url": "https://amethystclub.github.io",
     "logo": "https://amethystclub.github.io/images/logo.png",
     "sameAs": [
@@ -50,397 +52,214 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Amethystclub",
-    "url": "https://amethystclub.github.io",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://amethystclub.github.io/activities.html",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-  <style>
-    /* ================= WORLD-CLASS DESIGN SYSTEM ================= */
-    :root {
-      --bg: #ffffff;
-      --ink: #0f172a;
-      --muted: #475569;
-      --accent: #6b5ae0;
-      --line: #e5e7eb;
-    }
+<style>
+:root {
+  --ink:#0f172a;
+  --muted:#475569;
+  --accent:#6b5ae0;
+  --line:#e5e7eb;
+}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-    html { scroll-behavior: smooth; }
-    body {
-      background:
-        radial-gradient(1400px 700px at 85% -15%, rgba(107,90,224,0.22), transparent 60%),
-        radial-gradient(1000px 600px at 10% 25%, rgba(217,70,122,0.18), transparent 55%),
-        radial-gradient(900px 500px at 50% 85%, rgba(245,158,11,0.14), transparent 60%),
-        linear-gradient(180deg, #f9fafb 0%, #ffffff 40%, #f8fafc 100%);
-      color: var(--ink);
-      line-height: 1.7;
-      position: relative;
-      overflow-x: hidden;
-    }
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Cairo',sans-serif;
+}
 
-    /* subtle global grain texture */
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-    }
-    }
-    }
+html { scroll-behavior:smooth; }
 
-    /* ensure content stays above atmospheric blobs */
-    body > * {
-      position: relative;
-      z-index: 1;
-    }
+body {
+  background:
+    radial-gradient(1400px 700px at 85% -15%, rgba(107,90,224,.22), transparent 60%),
+    radial-gradient(1000px 600px at 10% 25%, rgba(217,70,122,.18), transparent 55%),
+    radial-gradient(900px 500px at 50% 85%, rgba(245,158,11,.14), transparent 60%),
+    linear-gradient(180deg,#f9fafb,#fff,#f8fafc);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
 
-    
-    /* ================= REVEAL (GLOBAL) ================= */
-    .reveal {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity .8s ease, transform .8s ease;
-      will-change: opacity, transform;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+body::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:0;
+}
 
-    /* ================= HERO ================= */
-    header {
-      min-height: 88vh; /* reduced from 100vh so hero fits in one screen */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 32px 20px 24px; /* slightly tighter vertical spacing */
-      position: relative;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,1));
-      backdrop-filter: saturate(120%) blur(2px);
-      transform: translateZ(0);
-    }
-    }
+body > * { position:relative; z-index:1; }
 
-    .hero {
-      position: relative;
-      max-width: 1100px;
-      margin: auto;
-    }
+.reveal {
+  opacity:0;
+  transform:translateY(12px);
+  transition:.8s ease;
+}
 
-    .brand-mark {
-      font-size: clamp(3rem, 7vw, 5.6rem); /* slightly smaller */
-      font-weight: 900;
-      letter-spacing: 0.32em;
-      margin-bottom: 10px; /* tighter */
-      background: linear-gradient(120deg, #6b5ae0, #d9467a, #f59e0b, #6b5ae0);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shimmer 6s ease-in-out infinite;
-    }
+.reveal.visible {
+  opacity:1;
+  transform:none;
+}
 
-    @keyframes shimmer {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+/* HERO */
+header {
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:32px 20px;
+}
 
-    .brand-tagline {
-      font-size: 0.85rem; /* reduced */
-      letter-spacing: 0.45em;
-      text-transform: uppercase;
-      font-weight: 700;
-      background: linear-gradient(90deg, #f59e0b, #d9467a, #6b5ae0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 28px; /* tighter */
-      opacity: 0.95;
-    }
+.hero { max-width:1100px; }
 
-        }
+.brand-mark {
+  font-size:clamp(3rem,7vw,5.6rem);
+  font-weight:900;
+  letter-spacing:.32em;
+  background:linear-gradient(120deg,#6b5ae0,#d9467a,#f59e0b,#6b5ae0);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:shimmer 6s infinite;
+}
 
-    .brand-tagline {
-      font-size: 0.9rem;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 42px;
-    }
+@keyframes shimmer {
+  0%{background-position:0%}
+  50%{background-position:100%}
+  100%{background-position:0%}
+}
 
-    .hero h1 {
-      font-size: clamp(2.6rem, 5.5vw, 4.6rem); /* reduced */
-      font-weight: 700;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
-    }
+.brand-tagline {
+  font-size:.85rem;
+  letter-spacing:.45em;
+  font-weight:700;
+  margin:24px 0;
+  background:linear-gradient(90deg,#f59e0b,#d9467a,#6b5ae0);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    .hero p {
-      font-size: 1.05rem; /* slightly smaller */
-      max-width: 760px;
-      margin: 0 auto 36px; /* reduced bottom space */
-      color: var(--muted);
-    }
+.hero h1 {
+  font-size:clamp(2.6rem,5.5vw,4.6rem);
+  margin-bottom:20px;
+}
 
-    .hero .cta-main {
-      display: inline-block;
-      padding: 18px 52px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.05rem;
-      box-shadow: 0 14px 36px rgba(107,90,224,.4);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
+.hero p {
+  max-width:760px;
+  margin:0 auto 36px;
+  color:var(--muted);
+}
 
-    .hero .cta-main:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 22px 52px rgba(107,90,224,.55);
-    }
+.cta-main {
+  display:inline-block;
+  padding:18px 52px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 14px 36px rgba(107,90,224,.4);
+}
 
-    /* ================= IMPACT ================= */
-    section {
-      padding: 140px 20px;
-      border-top: none;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.95));
-    }
+section { padding:120px 20px; }
 
-    .impact {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      gap: 70px;
-      text-align: center;
-    }
+.impact {
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  gap:60px;
+  text-align:center;
+}
 
-    /* Mobile: stacked */
-    @media (max-width: 600px) {
-      .impact {
-        grid-template-columns: 1fr;
-      }
-    }
+@media(min-width:992px){
+  .impact{grid-template-columns:repeat(3,280px);justify-content:center;}
+}
 
-    /* Tablet: 2 columns – prevent empty gap with 3 items */
-    @media (min-width: 601px) and (max-width: 991px) {
-      .impact {
-        grid-template-columns: repeat(2, 280px);
-        justify-content: center;
-      }
+.statement {
+  max-width:960px;
+  margin:auto;
+  font-size:clamp(1.8rem,3vw,2.6rem);
+  text-align:center;
+  font-weight:600;
+}
 
-      /* make the last stat span full row to avoid ghost column */
-      .impact > div:last-child {
-        grid-column: 1 / -1;
-        justify-self: center;
-      }
+.activities {
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
 
-    }
+@media(max-width:900px){
+  .activities{grid-template-columns:1fr;text-align:center;}
+}
 
-    /* Desktop and up: EXACTLY 3 columns, centered */
-    @media (min-width: 992px) {
-      .impact {
-        grid-template-columns: repeat(3, 280px);
-        justify-content: center;
-      }
-    }
+footer {
+  padding:60px 20px;
+  text-align:center;
+  font-size:.85rem;
+  color:var(--muted);
+  border-top:1px solid var(--line);
+}
 
-    .impact h2 {
-      font-size: clamp(3.2rem, 5vw, 4.5rem);
-      color: var(--accent);
-      margin-bottom: 14px;
-      letter-spacing: -1px;
-    }
+.lang-switch {
+  position:fixed;
+  top:20px;
+  left:20px;
+}
 
-    .impact p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    /* ================= STATEMENT ================= */
-    .statement {
-      max-width: 960px;
-      margin: auto;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      line-height: 1.35;
-      text-align: center;
-      font-weight: 600;
-    }
-
-    /* ================= ACTIVITIES (STORYTELLING) ================= */
-    .activities {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .activities h3 {
-      font-size: 2.2rem;
-      margin-bottom: 22px;
-    }
-
-    .activities p {
-      color: var(--muted);
-      font-size: 1rem;
-      margin-bottom: 28px;
-    }
-
-    .activities a {
-      font-weight: 600;
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-          100% { background-position: -200% 0; }
-    }
-
-    /* ================= CTA ================= */
-    .cta {
-      text-align: center;
-    }
-
-    .cta-links {
-      margin-top: 48px;
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .cta-links a {
-      padding: 14px 34px;
-      border-radius: 999px;
-      background: var(--ink);
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-    }
-
-    /* Hover / Active – platform colors only on interaction */
-    .cta-links a#ctaInstagram:hover,
-    .cta-links a#ctaInstagram:active {
-      background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
-    }
-
-    .cta-links a#ctaTiktok:hover,
-    .cta-links a#ctaTiktok:active {
-      background: #000000;
-    }
-
-    .cta-links a#ctaMail:hover,
-    .cta-links a#ctaMail:active {
-      background: #ea4335;
-    }
-
-    .cta-links a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 36px rgba(15,23,42,.25);
-    }
-
-    /* ================= FOOTER ================= */
-    footer {
-      padding: 70px 20px;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-    }
-
-    /* ================= LANGUAGE ================= */
-    .lang-switch {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 10;
-    }
-
-    .lang-switch button {
-      background: white;
-      border: 1px solid var(--line);
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    @media (max-width: 900px) {
-      .activities {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .activity-placeholder {
-        height: 220px;
-        margin-top: 40px;
-      }
-    }
-    
-  </style>
+.lang-switch button {
+  padding:6px 14px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:#fff;
+  cursor:pointer;
+}
+</style>
 </head>
+
 <body>
 
 <div class="lang-switch">
   <button onclick="toggleLang()">EN</button>
 </div>
 
-<header data-parallax>
+<header>
   <div class="hero">
     <div class="brand-mark reveal">AMETHYST</div>
     <div class="brand-tagline reveal">SHINE IN HEALING</div>
     <h1 id="heroTitle" class="reveal">نصنع قادة الطب<br>لا مجرد طلبة</h1>
-    <p id="heroText" class="reveal">Amethyst Club هو مجتمع طلابي طبي يقوده الطلبة، ويؤمن بأن المعرفة، التأثير، والخدمة هي أساس التغيير الحقيقي.</p>
+    <p id="heroText" class="reveal">
+      Amethyst Club هو مجتمع طلابي طبي يقوده الطلبة، ويؤمن بأن المعرفة والتأثير والخدمة أساس التغيير.
+    </p>
     <a href="#impact" class="cta-main reveal" id="heroBtn">اكتشف أثرنا</a>
   </div>
 </header>
 
 <section id="impact">
   <div class="impact reveal">
-    <div><h2>+10</h2><p id="i1">نشاط علمي وثقافي وتطبيقي</p></div>
-    <div><h2>+50</h2><p id="i2">طالب مستفيد</p></div>
-    <div><h2>+2</h2><p id="i3">حملة توعوية</p></div>
+    <div><h2>+10</h2><p>نشاط علمي وتطبيقي</p></div>
+    <div><h2>+50</h2><p>طالب مستفيد</p></div>
+    <div><h2>+2</h2><p>حملة توعوية</p></div>
   </div>
 </section>
 
 <section>
-  <div class="statement reveal" id="statementText">
-    لسنا ناديًا يشرح الطب فقط، بل مساحة تصنع الوعي، المسؤولية، والإنسان قبل الطبيب.
+  <div class="statement reveal">
+    لسنا ناديًا يشرح الطب فقط، بل مساحة تصنع الوعي والمسؤولية والإنسان قبل الطبيب.
   </div>
 </section>
 
 <section>
   <div class="activities reveal">
     <div>
-      <h3 id="actTitle">التعلّم خارج القاعات</h3>
-      <p id="actText">أنشطتنا ليست محاضرات تقليدية، بل تجارب حقيقية تربط المعرفة بالواقع، وتبني شخصية الطبيب قبل مهاراته.</p>
-      <a href="activities.html" id="actLink" aria-label="الانتقال إلى صفحة الأنشطة">استكشف أنشطة النادي الطبية →</a>
+      <h3>التعلّم خارج القاعات</h3>
+      <p>أنشطتنا تجارب حقيقية تربط المعرفة بالواقع.</p>
+      <a href="activities.html">استكشف أنشطتنا →</a>
     </div>
-  </div>
-</section>
-
-<section class="cta reveal">
-  <h2 id="ctaTitle">كن جزءًا من التجربة</h2>
-  <div class="cta-links">
-    <a href="https://www.instagram.com/amethyst__club/" target="_blank" id="ctaInstagram">Instagram</a>
-    <a href="https://www.tiktok.com/@amethyst__club" target="_blank" id="ctaTiktok">TikTok</a>
-    <a href="https://mail.google.com/mail/?view=cm&to=amethystclub18@gmail.com" target="_blank" id="ctaMail">Email</a>
   </div>
 </section>
 
@@ -449,50 +268,28 @@
 </footer>
 
 <script>
-  let isArabic = true;
-  function toggleLang() {
-    if (isArabic) {
-      document.documentElement.lang = 'en';
-      document.documentElement.dir = 'ltr';
-      document.querySelector('.brand-mark').innerText = 'AMETHYST';
-      document.querySelector('.brand-tagline').innerText = 'SHINE IN HEALING';
-      heroTitle.innerHTML = 'Shaping Future Medical Leaders';
-      heroText.innerText = 'Amethyst Club is a student-led medical community driven by knowledge, impact, and service.';
-      heroBtn.innerText = 'Discover Our Impact';
-      i1.innerText = 'Scientific, cultural & practical activities';
-      i2.innerText = 'Students impacted';
-      i3.innerText = 'Awareness campaign';
-      statementText.innerText = 'We are not just a club that teaches medicine, but a space that builds awareness, responsibility, and the human before the doctor.';
-      actTitle.innerText = 'Learning beyond classrooms';
-      actText.innerText = 'Our activities are real experiences that connect theory to practice and shape the physician before the skills.';
-      actLink.innerText = 'Explore activities →';
-      ctaTitle.innerText = 'Be part of the experience';
-      isArabic = false;
-    } else {
-      location.reload();
+let isArabic=true;
+function toggleLang(){
+  if(isArabic){
+    document.documentElement.lang='en';
+    document.documentElement.dir='ltr';
+    heroTitle.innerHTML='Shaping Future Medical Leaders';
+    heroText.innerText='Amethyst Club is a student-led medical community driven by knowledge, impact, and service.';
+    heroBtn.innerText='Discover Our Impact';
+    isArabic=false;
+  }else location.reload();
+}
+
+const observer=new IntersectionObserver(e=>{
+  e.forEach(x=>{
+    if(x.isIntersecting){
+      x.target.classList.add('visible');
+      observer.unobserve(x.target);
     }
-  }
-  /* soft parallax effect */
-  const parallax = document.querySelector('[data-parallax]');
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY * 0.15;
-    parallax.style.transform = `translateY(${y}px)`;
   });
-  // ===== REVEAL OBSERVER =====
-  const revealObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
+},{threshold:.12});
 
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 
 </body>
