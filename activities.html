@@ -2,544 +2,431 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>أنشطة Amethyst Club</title>
 
   <!-- SEO -->
-  <meta name="description" content="اكتشف أنشطة Amethyst Club: أيام دراسية، ورشات تطبيقية، وحملات توعوية." />
+  <meta name="description" content="أنشطة Amethyst Club الطبية: أيام دراسية، حملات توعوية، دورات تكوينية، ومبادرات إنسانية." />
+  <meta name="keywords" content="Amethyst Club, نادي طبي, أنشطة طبية, أيام دراسية, حملات توعوية, طب الجزائر" />
+  <meta name="robots" content="index, follow" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
+/* ================= GLOBAL ================= */
+:root{
+  --bg:#f8fafc;
+  --surface:#ffffff;
+  --ink:#0b1220;
+  --muted:#5b6475;
+  --accent:#5b4ce6;
+  --accent-soft:#f1f0ff;
+  --line:#e6e8ef;
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Cairo',sans-serif;}
+body{
+  background:linear-gradient(180deg,#f8fafc,#eef1f7);
+  color:var(--ink);
+  line-height:1.75;
+}
 
-    :root {
-      /* Iftar – green accent */
-      --green-soft: #f1fdf6;
-      --green-border: #34c38f;
-      --green-accent: #1f9d6e;
+/* ================= HEADER ================= */
+header{
+  padding:clamp(60px,8vw,100px) 16px;
+  text-align:center;
+  background:radial-gradient(circle at top,var(--accent-soft),#fff 65%);
+  border-bottom:1px solid var(--line);
+}
+header h1{
+  font-size:clamp(2.2rem,6vw,3.8rem);
+  color:var(--accent);
+  margin-bottom:14px;
+}
+header p{
+  max-width:780px;
+  margin:auto;
+  color:var(--muted);
+}
 
-      --bg: #ffffff;
-      --ink: #0f172a;
-      --muted: #475569;
-      --accent: #6b5ae0;
-      --line: #e5e7eb;
+/* ================= LAYOUT ================= */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:clamp(40px,6vw,100px) 16px;
+}
+.activities-grid{display:grid;gap:clamp(24px,5vw,44px);}
 
-      /* Pink October – subtle palette */
-      --pink-soft: #fff1f6;
-      --pink-border: #f3c6d8;
-      --pink-accent: #d9467a;
+.activity-card{
+  background:var(--surface);
+  border:1.5px solid var(--accent);
+  border-radius:26px;
+  padding:clamp(22px,4vw,36px);
+  cursor:pointer;
+  transition:.3s ease;
+}
+.activity-card:hover{box-shadow:0 22px 55px rgba(0,0,0,.12);transform:translateY(-3px);}  
+.activity-card span{font-size:.7rem;letter-spacing:.35em;color:var(--accent);display:block;margin-bottom:10px;}
+.activity-card h3{font-size:clamp(1.3rem,4vw,1.6rem);margin-bottom:8px;}
+.activity-card p{color:var(--muted);max-width:720px;}
+.card-details{display:none;margin-top:26px;}
+.activity-card.active .card-details{display:block;}
 
-      /* Vaccination – yellow accent */
-      --yellow-soft: #fff9e6;
-      --yellow-border: #f5d565;
-      --yellow-accent: #e0a800;
-    }
+/* ================= EVENTS ================= */
+.inner-events{list-style:none;display:grid;gap:20px;}
+.inner-events li{border:1.5px solid var(--accent);border-radius:22px;padding:22px;background:#fff;transition:.3s ease;}
+.inner-events li.active{box-shadow:0 18px 40px rgba(0,0,0,.14);}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-    body {
-      background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
-      color: var(--ink);
-      line-height: 1.75;
-    }
+/* ===== HERO ===== */
+.major-event .hero-preview{
+  width:100%;
+  aspect-ratio:21/9;
+  max-height:170px;
+  min-height:140px; /* ضمان ظهور الغلاف دائمًا */
+  border-radius:16px;
+  overflow:hidden;
+  margin-bottom:12px;
+  position:relative;
+  background:linear-gradient(135deg,var(--accent-soft),#e9ecff); /* fallback في حال لم تُحمّل الصورة */
+}
+.major-event .hero-preview img{width:100%;height:100%;object-fit:cover;}
+.major-event .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(91,76,230,.75),rgba(91,76,230,.15));display:flex;align-items:flex-end;justify-content:center;padding:10px;color:#fff;font-size:.75rem;font-weight:600;}
+.major-event.active .hero-preview{display:none;}
 
-    /* ================= HEADER ================= */
-    header {
-      padding: 100px 20px 80px;
-      text-align: center;
-      border-bottom: 1px solid var(--line);
-      background: radial-gradient(circle at top, #eef2ff, #ffffff 60%);
-    }
-    header h1 {
-      font-size: clamp(2.8rem, 6vw, 4.2rem);
-      color: var(--accent);
-      margin-bottom: 18px;
-      letter-spacing: .5px;
-    }
-    header p {
-      max-width: 780px;
-      margin: auto;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
+/* ===== DETAILS ===== */
+.event-details{max-height:0;overflow:hidden;opacity:0;transition:.6s ease;}
+.inner-events li.active .event-details{max-height:9999px;opacity:1;margin-top:18px;}
+.event-text{display:flex;flex-direction:column;gap:12px;}
+.event-text p{text-align:justify;}
 
-    /* ================= GRID ================= */
-    section { max-width: 1200px; margin: auto; padding: 110px 20px; }
-    .activities-grid { display: grid; grid-template-columns: 1fr; gap: 44px; }
+/* ===== SPEAKERS BADGES ===== */
+.speakers{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:12px;
+}
+.speaker-badge{
+  background:var(--accent-soft);
+  color:var(--accent);
+  border:1px solid var(--accent);
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:600;
+  white-space:nowrap;
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.speaker-badge:hover{
+  background:var(--accent);
+  color:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(91,76,230,.35);
+}
+.speaker-badge span{opacity:.75;font-weight:500;}
+.speaker-badge span{opacity:.75;font-weight:500;}
+.event-media{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;}
+.event-media img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:14px;
+  cursor:zoom-in; /* يدل أن الصورة قابلة للفتح */
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.event-media img:hover{
+  transform:scale(1.02);
+  box-shadow:0 14px 32px rgba(0,0,0,.22);
+}
+.event-media img:first-child{grid-column:1/-1;aspect-ratio:16/9;}
 
-    .activity-card {
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 38px 34px;
-      cursor: pointer;
-      background: #fff;
-      transition: box-shadow .3s ease, transform .3s ease;
-    }
-    .activity-card:hover {
-      box-shadow: 0 20px 50px rgba(0,0,0,.1);
-      transform: translateY(-2px);
-    }
-
-    .activity-card span {
-      font-size: .7rem;
-      letter-spacing: .35em;
-      color: var(--accent);
-      display: block;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-    }
-    .activity-card h3 {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-    }
-    .activity-card p {
-      color: var(--muted);
-      font-size: 1rem;
-      max-width: 720px;
-    }
-
-    .card-details { display: none; margin-top: 30px; }
-    .activity-card.active .card-details { display: block; }
-
-    /* ================= INNER EVENTS ================= */
-    .inner-events { list-style: none; display: grid; gap: 26px; margin-top: 26px; }
-
-    .inner-events li {
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 28px 26px;
-      cursor: pointer;
-      background: #fff;
-      transition: box-shadow .35s ease, border-color .35s ease;
-    }
-
-    .inner-events li.active {
-      box-shadow: 0 18px 42px rgba(0,0,0,.14);
-    }
-
-    .inner-events li strong {
-      display: block;
-      font-size: 1.25rem;
-      margin-bottom: 6px;
-      letter-spacing: .3px;
-    }
-
-    /* Accent borders per event */
-    .vaccination-event.active{ border-color: var(--yellow-border); }
-    .iftar-event.active{ border-color: var(--green-border); }
-
-    /* ================= DETAILS ================= */
-    .event-details {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: max-height .7s ease, opacity .5s ease;
-    }
-    .inner-events li.active .event-details {
-      max-height: 20000px;
-      opacity: 1;
-      margin-top: 22px;
-    }
-
-    .event-layout { display: grid; grid-template-columns: 1fr; gap: 34px; }
-
-    /* ===== TEXT ===== */
-    .event-text p {
-      font-size: 1rem;
-      margin-bottom: 14px;
-      text-align: justify;
-    }
-
-    .event-text .float-right,
-    .event-text .float-left {
-      width: min(44%, 440px);
-      border-radius: 18px;
-      margin: 8px 0 18px;
-    }
-    .event-text .float-right { float: right; margin-left: 20px; }
-    .event-text .float-left { float: left; margin-right: 20px; }
-    .event-text::after { content: ""; display: block; clear: both; }
-
-    /* ===== MEDIA GRID ===== */
-    .featured-event .event-media {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
-      margin-top: 22px;
-    }
-
-    .featured-event .event-media img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 20px;
-      box-shadow: 0 14px 32px rgba(0,0,0,.14);
-      transition: transform .35s ease, box-shadow .35s ease;
-    }
-
-    .featured-event .event-media img:hover {
-      transform: translateY(-6px) scale(1.01);
-      box-shadow: 0 22px 46px rgba(0,0,0,.22);
-    }
-
-    .featured-event .event-media img:first-child {
-      grid-column: 1 / -1;
-      height: 420px;
-    }
-
-    @media (max-width: 768px) {
-      .event-text .float-right,
-      .event-text .float-left {
-        float: none;
-        width: 100%;
-        margin: 18px 0;
-      }
-      .featured-event .event-media img:first-child {
-        height: auto;
-      }
-    }
-
-    footer {
-      padding: 70px 20px;
-      text-align: center;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-      background: #fafafa;
-    }
-
-    /* Titles colors */
-    .title-pink{ color: var(--pink-accent); }
-    .title-yellow{ color: var(--yellow-accent); }
-    .title-green{ color: var(--green-accent); }
-
-    /* Back to home */
-    .back-home{
-      position: fixed;
-      top: 26px;
-      right: 26px;
-      z-index: 1000;
-      text-decoration: none;
-      background: #ffffff;
-      border: 1px solid var(--line);
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--accent);
-      box-shadow: 0 8px 24px rgba(0,0,0,.12);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-    .back-home:hover{
-      transform: translateY(-3px);
-      box-shadow: 0 14px 36px rgba(0,0,0,.18);
-    }
-
-</style>
+/* ================= FOOTER ================= */
+footer{padding:50px 16px;text-align:center;color:var(--muted);border-top:1px solid var(--line);}  
+.back-home{position:fixed;top:18px;right:18px;background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:999px;color:var(--accent);text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.12);}  
+  </style>
 </head>
 <body>
 
-
-<a href="index.html" class="back-home" aria-label="العودة إلى الصفحة الرئيسية">← الصفحة الرئيسية</a>
+<a href="index.html" class="back-home">← الصفحة الرئيسية</a>
 <header>
   <h1>أنشطة Amethyst Club</h1>
   <p>نعمل على تنظيم أنشطة علمية، تطبيقية، وإنسانية تهدف إلى بناء الطبيب الواعي قبل المتمكن.</p>
 </header>
 
 <section>
-  <div class="activities-grid">
+<div class="activities-grid">
 
-    <!-- Study Days Card -->
-    <div class="activity-card expandable" onclick="toggleMainCard(event, this)">
-      <span>Study Days</span>
-      <h3>الأيام الدراسية الطبية والتوعوية</h3>
-      <p>أيام دراسية كبرى تجمع بين التكوين الطبي والتوعية الصحية.</p>
+<!-- STUDY DAYS -->
+<div class="activity-card expandable" onclick="toggleMainCard(event,this)">
+<span>Study Days</span>
+<h3>الأيام الدراسية الطبية والتوعوية</h3>
+<p>أيام دراسية كبرى تجمع بين التكوين الطبي والتوعية الصحية.</p>
+<div class="card-details">
+<ul class="inner-events">
 
-      <div class="card-details">
-        <ul class="inner-events">
-          <li class="featured-event" onclick="toggleInnerEvent(event, this)">
-            <strong class="title-pink">اليوم الدراسي – أكتوبر الوردي</strong>
-                        <div class="event-details">
-              <div class="event-layout">
-                <div class="event-text">
-                  <img src="images/october-pink-1.jpg" class="float-right" />
-                  <p>
-                    في إطار الجهود التوعوية الرامية إلى تعزيز الوقاية الصحية، نظّم <strong>Amethyst Club</strong>
-                    يومًا دراسيًا طبيًا وتوعويًا واسع النطاق بمناسبة <strong>أكتوبر الوردي</strong>، خُصّص
-                    للتحسيس بأهمية الكشف المبكر عن سرطان الثدي ودوره المحوري في تقليص نسب الوفيات
-                    وتحسين فرص العلاج.
-                  </p>
-                  <p>
-                    شهد الحدث حضورًا لافتًا فاق <strong>300 مشارك</strong> من الأسرة الجامعية، من أساتذة وطلبة
-                    وطالبات ينتمون إلى مختلف التخصصات بجامعة <strong>يحيى فارس</strong>، ما عكس الاهتمام
-                    المتزايد بالقضايا الصحية ذات البعد المجتمعي.
-                  </p>
-                  <img src="images/october-pink-3.jpg" class="float-left" />
-                  <p>
-                    نُظّم اليوم الدراسي <strong>بالشراكة مع المؤسسة الاستشفائية العمومية محمد بوضياف – المدية</strong>،
-                    وبمساهمة طاقم طبي متعدد الاختصاصات ضم أطباء عامّين، أطباء مختصين، أطباء علم النفس،
-                    إلى جانب فوج من القابلات، حيث تم تقديم محاضرات علمية وتدخلات طبية ثرية
-                    تناولت الجوانب الوقائية، النفسية، والتشخيصية للمرض.
-                  </p>
-                  <p>
-                    كما تميّز الحدث بتنظيم <strong>معرض توعوي</strong> مفتوح خارج قاعة المحاضرات،
-                    إضافة إلى إجراء <strong>فحوصات طبية لفائدة النساء</strong> تحت إشراف الأطباء
-                    وفريق قابلات الصحة العمومية، في خطوة عملية لترسيخ ثقافة الوقاية والكشف المبكر.
-                  </p>
-                  <p>
-                    وحظي اليوم الدراسي بتغطية إعلامية من طرف <strong>إذاعة المدية</strong>،
-                    التي واكبت مختلف فقراته وساهمت في إيصال رسالته التوعوية إلى جمهور أوسع،
-                    بما يعزز الدور المجتمعي للنادي في نشر الوعي الصحي وترسيخ قيم المسؤولية الطبية.
-                  </p>
-                </div>
-                <div class="scroll-hint">⬇ مرّر للأسفل لمشاهدة بقية الصور</div>
-                <div class="event-media">
-                  <img src="images/october-pink-2.jpg" />
-                  <img src="images/october-pink-3.jpg" />
-                  <img src="images/october-pink-4.jpg" />
-                  <img src="images/october-pink-5.jpg" />
-                  <img src="images/october-pink-6.jpg" />
-                  <img src="images/october-pink-7.jpg" />
-                  <img src="images/october-pink-8.jpg" />
-                  <img src="images/october-pink-9.jpg" />
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="featured-event vaccination-event" onclick="toggleInnerEvent(event, this)">
-            <strong class="title-yellow">حملة التوعية بأهمية التلقيح</strong>
-            <div class="event-details">
-              <div class="event-layout">
-                <div class="event-text">
-                  <img src="images/vaccination-1.jpg" class="float-left" />
-                  <p>
-                    في إطار تعزيز الثقافة الصحية والوقاية المجتمعية، نظّم ناديا <strong>Amethyst</strong> و<strong>Medgood</strong>
-                    الطبيّان حملة توعوية مشتركة حول <strong>أهمية التلقيح</strong>، باعتباره أحد أهم الركائز
-                    الأساسية في الوقاية من الأمراض المعدية وحماية الصحة العمومية.
-                  </p>
-                  <p>
-                    هدفت الحملة إلى تبسيط المفاهيم العلمية المرتبطة باللقاحات، وشرح آليات عملها،
-                    مع التأكيد على دورها في الحد من انتشار الأوبئة وحماية الفئات الهشّة داخل المجتمع،
-                    خاصة الأطفال وكبار السن وذوي الأمراض المزمنة.
-                  </p>
-                  <img src="images/vaccination-2.jpg" class="float-right" />
-                  <p>
-                    تضمن الحدث <strong>محاضرات علمية</strong> و<strong>نقاشات تفاعلية</strong>، إلى جانب
-                    <strong>استشارات توعوية</strong>، خُصّصت لتقديم معلومات دقيقة حول
-                    <strong>فعالية اللقاحات وسلامتها</strong>، وتصحيح عدد من المفاهيم الخاطئة المتداولة،
-                    في إطار مقاربة علمية مبسّطة وموجّهة للطلبة.
-                  </p>
-                  <p>
-                    كما عرفت الحملة تفاعلًا إيجابيًا من الحضور، من خلال طرح الأسئلة ومناقشة
-                    مختلف الجوانب الطبية والأخلاقية المرتبطة بالتلقيح، بما يعكس وعي الطلبة
-                    بأهمية الوقاية ودورهم المستقبلي كفاعلين في المجال الصحي.
-                  </p>
-                  <p>
-                    ويعرب الناديان عن فخرهما بأعضائهما لما أبدوه من <strong>التزام ومسؤولية</strong>
-                    في المساهمة بحماية صحة الفرد والمجتمع، وترسيخ ثقافة التوعية الصحية والعمل
-                    الطبي التطوعي داخل الوسط الجامعي.
-                  </p>
-                </div>
-                <div class="scroll-hint">⬇ مرّر للأسفل لمشاهدة بقية الصور</div>
-                <div class="event-media">
-                  <!-- تم حذف الصورة المكررة (vaccination-2) لتفادي التكرار -->
-                  <img src="images/vaccination-3.jpg" />
-                  <img src="images/vaccination-4.jpg" />
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+<li class="major-event" onclick="toggleInnerEvent(event,this)">
+<div class="hero-preview"><img loading="lazy" src="images/october-pink-cover.jpg"><div class="hero-overlay">اضغط لرؤية المزيد</div></div>
+<strong>اليوم الدراسي – أكتوبر الوردي</strong>
+<div class="event-details">
+<div class="event-text">
+<p>في إطار الجهود التوعوية الرامية إلى تعزيز الوقاية الصحية، نظّم <strong>Amethyst Club</strong> يومًا دراسيًا طبيًا وتوعويًا واسع النطاق بمناسبة <strong>أكتوبر الوردي</strong>، خُصّص للتحسيس بأهمية الكشف المبكر عن سرطان الثدي ودوره المحوري في تقليص نسب الوفيات وتحسين فرص العلاج.</p>
+<p>شهد الحدث حضورًا لافتًا فاق <strong>300 مشارك</strong> من الأسرة الجامعية، من أساتذة وطلبة وطالبات ينتمون إلى مختلف التخصصات بجامعة <strong>يحيى فارس</strong>، ما عكس الاهتمام المتزايد بالقضايا الصحية ذات البعد المجتمعي.</p>
+<p>نُظّم اليوم الدراسي بالشراكة مع المؤسسة الاستشفائية العمومية <strong>محمد بوضياف – المدية</strong>، وبمساهمة طاقم طبي متعدد الاختصاصات ضم أطباء عامّين، أطباء مختصين، أطباء علم النفس، إلى جانب فوج من القابلات، حيث تم تقديم محاضرات علمية وتدخلات طبية ثرية تناولت الجوانب الوقائية، النفسية، والتشخيصية للمرض.</p>
+<p>كما تميّز الحدث بتنظيم <strong>معرض توعوي</strong> مفتوح خارج قاعة المحاضرات، إضافة إلى إجراء <strong>فحوصات طبية لفائدة النساء</strong> تحت إشراف الأطباء وفريق قابلات الصحة العمومية.</p>
+<p>وحظي اليوم الدراسي بتغطية إعلامية من طرف <strong>إذاعة المدية</strong>، التي واكبت مختلف فقراته وساهمت في إيصال رسالته التوعوية إلى جمهور أوسع.</p>
+<div class="speakers">
+<span class="speaker-badge">د. سامي زروقي</span>
+<span class="speaker-badge">د. دكار نبيلة</span>
+<span class="speaker-badge">د. زروقي عبلة</span>
+<span class="speaker-badge">د. ولد شقماقجي محمد</span>
+<span class="speaker-badge">د. باشن</span>
+<span class="speaker-badge">فوج قابلات الصحة العمومية</span>
+</div>
+</div>
+<div class="event-media">
+<img loading="lazy" src="images/october-pink-1.jpg">
+<img loading="lazy" src="images/october-pink-2.jpg">
+<img loading="lazy" src="images/october-pink-3.jpg">
+<img loading="lazy" src="images/october-pink-4.jpg">
+<img loading="lazy" src="images/october-pink-5.jpg">
+<img loading="lazy" src="images/october-pink-6.jpg">
+<img loading="lazy" src="images/october-pink-7.jpg">
+<img loading="lazy" src="images/october-pink-8.jpg">
+<img loading="lazy" src="images/october-pink-9.jpg">
+</div>
+</div>
+</li>
 
-    <!-- Courses Card -->
-    <div class="activity-card expandable" onclick="toggleMainCard(event, this)">
-      <span>Courses</span>
-      <h3>الدورات والتكوين</h3>
-      <p>دورات تقنية وتكوينية موجهة لأعضاء النادي.</p>
+<li class="major-event" onclick="toggleInnerEvent(event,this)">
+<div class="hero-preview"><img loading="lazy" src="images/vaccination-cover.jpg"><div class="hero-overlay">اضغط لرؤية المزيد</div></div>
+<strong>حملة التوعية بأهمية التلقيح</strong>
+<div class="event-details">
+<div class="event-text">
+<p>في إطار تعزيز الثقافة الصحية والوقاية المجتمعية، نظّم ناديا <strong>Amethyst</strong> و<strong>Medgood</strong> الطبيّان حملة توعوية مشتركة حول <strong>أهمية التلقيح</strong>، باعتباره أحد أهم الركائز الأساسية في الوقاية من الأمراض المعدية وحماية الصحة العمومية.</p>
+<p>هدفت الحملة إلى تبسيط المفاهيم العلمية المرتبطة باللقاحات، وشرح آليات عملها، مع التأكيد على دورها في الحد من انتشار الأوبئة وحماية الفئات الهشّة داخل المجتمع، خاصة الأطفال وكبار السن وذوي الأمراض المزمنة.</p>
+<p>تضمن الحدث <strong>محاضرات علمية</strong> و<strong>نقاشات تفاعلية</strong>، إلى جانب <strong>استشارات توعوية</strong>، خُصّصت لتقديم معلومات دقيقة حول <strong>فعالية اللقاحات وسلامتها</strong>، وتصحيح عدد من المفاهيم الخاطئة المتداولة، في إطار مقاربة علمية مبسّطة وموجّهة للطلبة.</p>
+<p>كما عرفت الحملة تفاعلًا إيجابيًا من الحضور، من خلال طرح الأسئلة ومناقشة مختلف الجوانب الطبية والأخلاقية المرتبطة بالتلقيح، بما يعكس وعي الطلبة بأهمية الوقاية ودورهم المستقبلي كفاعلين في المجال الصحي.</p>
+<p>ويعرب الناديان عن فخرهما بأعضائهما لما أبدوه من <strong>التزام ومسؤولية</strong> في المساهمة بحماية صحة الفرد والمجتمع، وترسيخ ثقافة التوعية الصحية والعمل الطبي التطوعي داخل الوسط الجامعي.</p>
+</div>
+<div class="event-media"><img loading="lazy" src="images/vaccination-1.jpg"><img loading="lazy" src="images/vaccination-3.jpg"><img loading="lazy" src="images/vaccination-4.jpg"></div>
+</div>
+</li>
 
-      <div class="card-details">
-        <ul class="inner-events">
-          <li class="featured-event" onclick="toggleInnerEvent(event, this)">
-            <strong>دورة Arduino (أونلاين – من الصفر)</strong>
-            <div class="event-details">
-              <div class="event-layout">
-                <div class="event-text">
-                  <img src="images/arduino-1.jpg" class="float-right" />
-                  <p>
-                    دورة تكوينية تقنية <strong>عن بُعد</strong> نُظّمت لفائدة أعضاء <strong>Amethyst Club</strong>،
-                    انطلقت من <strong>المستوى المبتدئ (من الصفر)</strong>، وهدفت إلى تعليم أساسيات برمجة قطعة
-                    <strong>Arduino</strong> وتطبيقاتها العملية خطوة بخطوة.
-                  </p>
-                  <p>
-                    تم تنظيم الدورة <strong>بالشراكة مع Innovation World School</strong>،
-                    وقدّمها الأستاذ <strong>عمور زروق وليد</strong>، في إطار دعم الابتكار
-                    وتنمية المهارات التقنية لدى الطلبة.
-                  </p>
-                </div>
-                <div class="scroll-hint">⬇ مرّر للأسفل لمشاهدة بقية الصور</div>
-                <div class="event-media">
-                  <img src="images/arduino-2.jpg" />
-                  <img src="images/arduino-3.jpg" />
-                  <img src="images/arduino-4.jpg" />
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+</ul>
+</div>
+</div>
 
-    <!-- Solidarity Card -->
-    <div class="activity-card expandable" onclick="toggleMainCard(event, this)">
-      <span>Solidarity</span>
-      <h3>المبادرات التضامنية والإنسانية</h3>
-      <p>مبادرات ميدانية تعكس القيم الإنسانية والتطوعية للنادي.</p>
-
-      <div class="card-details">
-        <ul class="inner-events">
-          <li class="featured-event" onclick="toggleInnerEvent(event, this)">
-            <strong>حملة دعم مرضى السرطان</strong>
-            <div class="event-details">
-              <div class="event-layout">
-                <div class="event-text">
-                  <img src="images/solidarity-1.jpg" class="float-left" />
-                  <p>
-                    مبادرة إنسانية متكاملة قام بها أعضاء <strong>Amethyst Club</strong>،
-                    شملت جمع تبرعات طوعية واقتناء هدايا رمزية.
-                  </p>
-                  <p>
-                    تم توزيع الهدايا على مرضى السرطان من <strong>الكبار</strong>
-                    بمستشفى <strong>فرانتز فانون</strong>، وعلى <strong>الأطفال</strong>
-                    بمستشفى <strong>حسيبة بن بوعلي</strong>، في زيارات ميدانية
-                    هدفت إلى إدخال السرور والدعم النفسي.
-                  </p>
-                </div>
-                <div class="scroll-hint">⬇ مرّر للأسفل لمشاهدة بقية الصور</div>
-                <div class="event-media">
-                  <img src="images/solidarity-2.jpg" />
-                  <img src="images/solidarity-3.jpg" />
-                  <img src="images/solidarity-4.jpg" />
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="featured-event iftar-event" onclick="toggleInnerEvent(event, this)">
-            <strong class="title-green">مبادرة إفطار صائم</strong>
-            <div class="event-details">
-              <div class="event-layout">
-                <div class="event-text">
-                  <img src="images/iftar-1.jpg" class="float-right" />
-                  <p>
-                    في أجواء يسودها التضامن والتكافل الاجتماعي، نظّم <strong>Amethyst Club</strong>
-                    مبادرة إنسانية مميّزة خلال <strong>شهر رمضان المبارك</strong>، تمثّلت في تنظيم
-                    <strong>إفطار صائم</strong> لفائدة الصائمين، حيث ساهم أعضاء النادي بتقديم
-                    <strong>80 وجبة إفطار على الطاولة</strong> و<strong>140 وجبة إفطار محمولة</strong>.
-                  </p>
-                  <p>
-                    تم تنفيذ هذه المبادرة في <strong>اليوم العشرين من الشهر الفضيل</strong>
-                    بالتعاون مع <strong>جمعية آفاق وزرة – ولاية المدية</strong>، حيث شهدت المبادرة
-                    تفاعلًا إيجابيًا من المستفيدين والمتطوعين على حد سواء، مؤكدةً حرص النادي
-                    على ترسيخ قيم <strong>التكافل الاجتماعي، العمل التطوعي، وخدمة المجتمع</strong>
-                    داخل الوسط الجامعي وخارجه.
-                  </p>
-                </div>
-                <div class="scroll-hint">⬇ مرّر للأسفل لمشاهدة بقية الصور</div>
-                <div class="event-media">
-                  <img src="images/iftar-2.jpg" />
-                  <img src="images/iftar-3.jpg" />
-                  <img src="images/iftar-4.jpg" />
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Entertainment Card -->
-    <div class="activity-card expandable" onclick="toggleMainCard(event, this)">
-      <span>Entertainment</span>
-      <h3>الأنشطة الترفيهية والثقافية</h3>
-      <p>أنشطة ترفيهية تهدف إلى خلق أجواء إيجابية للطلبة.</p>
-
-      <div class="card-details">
-        <ul class="inner-events">
-          <li class="featured-event" onclick="toggleInnerEvent(event, this)">
-            <strong>نشاط سينمائي جماعي</strong>
-            <div class="event-details">
-              <div class="event-layout">
-                <div class="event-text">
-                  <img src="images/cinema-1.jpg" class="float-left" />
-                  <p>
-                    نشاط ترفيهي جماعي نُظّم لفائدة الطلبة،
-                    هدف إلى خلق أجواء إيجابية داخل الوسط الجامعي
-                    وتخفيف الضغط الدراسي.
-                  </p>
-                </div>
-                <div class="scroll-hint">⬇ مرّر للأسفل لمشاهدة بقية الصور</div>
-                <div class="event-media">
-                  <img src="images/cinema-2.jpg" />
-                  <img src="images/cinema-3.jpg" />
-                  <img src="images/cinema-4.jpg" />
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="featured-event" onclick="toggleInnerEvent(event, this)">
-            <strong>عرض فيلم Home Alone</strong>
-            <div class="event-details">
-              <div class="event-layout">
-                <div class="event-text">
-                  <img src="images/homealone-1.jpg" class="float-right" />
-                  <p>
-                    عرض سينمائي جماعي لفيلم <strong>Home Alone</strong>
-                    بحضور الطلبة، في أجواء دافئة وتفاعلية
-                    جمعت بين الترفيه والمتعة.
-                  </p>
-                </div>
-                <div class="scroll-hint">⬇ مرّر للأسفل لمشاهدة بقية الصور</div>
-                <div class="event-media">
-                  <img src="images/homealone-2.jpg" />
-                  <img src="images/homealone-3.jpg" />
-                  <img src="images/homealone-4.jpg" />
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
+<!-- COURSES -->
+<div class="activity-card expandable" onclick="toggleMainCard(event,this)">
+<span>Courses</span>
+<h3>الدورات والتكوين</h3>
+<p>دورات تقنية وتكوينية موجهة لأعضاء النادي.</p>
+<div class="card-details"><ul class="inner-events">
+<li class="major-event" onclick="toggleInnerEvent(event,this)">
+<div class="hero-preview"><img loading="lazy" src="images/arduino-cover.jpg"><div class="hero-overlay">اضغط لرؤية المزيد</div></div>
+<strong>دورة Arduino (أونلاين – من الصفر)</strong>
+<div class="event-details">
+  <div class="event-text">
+    <p>دورة تكوينية تقنية عن بُعد لفائدة أعضاء النادي، انطلقت الدورة من المستوى المبتدئ (من الصفر)، وهدفت إلى تعليم أساسيات برمجة قطعة <strong>Arduino</strong> وتطبيقاتها العملية خطوة بخطوة.</p>
+    <p>تم تنظيم الدورة بالشراكة مع <strong>Innovation World School</strong>، قدّمها الأستاذ <strong>عمور زروق وليد</strong>، في إطار دعم الابتكار وتنمية المهارات التقنية لدى الطلبة.</p>
   </div>
+  <div class="event-media">
+    <img loading="lazy" src="images/arduino-1.jpg">
+    <img loading="lazy" src="images/arduino-2.jpg">
+    <img loading="lazy" src="images/arduino-3.jpg">
+  </div>
+</div>
+</li>
+</ul></div></div>
+
+<!-- SOLIDARITY -->
+<div class="activity-card expandable" onclick="toggleMainCard(event,this)">
+<span>Solidarity</span>
+<h3>المبادرات التضامنية والإنسانية</h3>
+<p>مبادرات ميدانية تعكس القيم الإنسانية والتطوعية للنادي.</p>
+<div class="card-details"><ul class="inner-events">
+<li class="major-event" onclick="toggleInnerEvent(event,this)">
+<div class="hero-preview"><img loading="lazy" src="images/solidarity-cover.jpg"><div class="hero-overlay">اضغط لرؤية المزيد</div></div>
+<strong>حملة دعم مرضى السرطان</strong>
+<div class="event-details"><div class="event-text">
+<p>مبادرة إنسانية متكاملة قام بها أعضاء <strong>Amethyst Club</strong>، شملت جمع تبرعات طوعية واقتناء هدايا رمزية.</p>
+<p>تم توزيع الهدايا على مرضى السرطان من <strong>الكبار</strong> بمستشفى <strong>فرانتز فانون</strong>، وعلى <strong>الأطفال</strong> بمستشفى <strong>حسيبة بن بوعلي</strong> بولاية <strong>البليدة</strong>، في زيارات ميدانية هدفت إلى إدخال السرور وتقديم الدعم النفسي.</p>
+</div>
+<div class="event-media"><img loading="lazy" src="images/solidarity-1.jpg"><img loading="lazy" src="images/solidarity-2.jpg"><img loading="lazy" src="images/solidarity-3.jpg"></div></div>
+</li>
+
+<li class="major-event" onclick="toggleInnerEvent(event,this)">
+<div class="hero-preview"><img loading="lazy" src="images/iftar-cover.jpg"><div class="hero-overlay">اضغط لرؤية المزيد</div></div>
+<strong>مبادرة إفطار صائم</strong>
+<div class="event-details"><div class="event-text">
+<p>في أجواء يسودها <strong>التضامن والتكافل الاجتماعي</strong>، نظّم <strong>Amethyst Club</strong> مبادرة إنسانية مميّزة خلال <strong>شهر رمضان المبارك</strong>، تمثّلت في تنظيم <strong>إفطار صائم</strong> لفائدة الصائمين، حيث ساهم أعضاء النادي بتقديم <strong>80 وجبة إفطار على الطاولة</strong> و<strong>140 وجبة إفطار محمولة</strong>.</p>
+<p>تم تنفيذ هذه المبادرة في <strong>اليوم العشرين من الشهر الفضيل</strong>، بالتعاون مع <strong>جمعية آفاق وزرة – ولاية المدية</strong>، حيث شهدت المبادرة تفاعلًا إيجابيًا من المستفيدين والمتطوعين على حد سواء، مؤكدةً حرص النادي على ترسيخ قيم <strong>التكافل الاجتماعي</strong>، <strong>العمل التطوعي</strong>، و<strong>خدمة المجتمع</strong> داخل الوسط الجامعي وخارجه.</p>
+</div>
+<div class="event-media"><img loading="lazy" src="images/iftar-1.jpg"><img loading="lazy" src="images/iftar-2.jpg"><img loading="lazy" src="images/iftar-3.jpg"></div></div>
+</li>
+</ul></div></div>
+
+<!-- ENTERTAINMENT -->
+<div class="activity-card expandable" onclick="toggleMainCard(event,this)">
+<span>Entertainment</span>
+<h3>الأنشطة الترفيهية والثقافية</h3>
+<p>أنشطة ترفيهية تهدف إلى خلق أجواء إيجابية للطلبة.</p>
+<div class="card-details"><ul class="inner-events">
+<li class="major-event" onclick="toggleInnerEvent(event,this)">
+<div class="hero-preview"><img loading="lazy" src="images/homealone-cover.jpg"><div class="hero-overlay">اضغط لرؤية المزيد</div></div>
+<strong>عرض فيلم Home Alone</strong>
+<div class="event-details"><div class="event-text"><p>عرض سينمائي جماعي لفيلم Home Alone في أجواء دافئة وتفاعلية جمعت بين الترفيه والمتعة.</p></div>
+<div class="event-media"><img loading="lazy" src="images/homealone-1.jpg"><img loading="lazy" src="images/homealone-2.jpg"><img loading="lazy" src="images/homealone-3.jpg"></div></div>
+</li>
+</ul></div></div>
+
+</div>
 </section>
 
-<footer>
-  © 2025 Amethyst Club — All rights reserved
-</footer>
+<footer>© 2025 Amethyst Club — All rights reserved</footer>
+
+<!-- LIGHTBOX OVERLAY -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(11,18,32,.85);z-index:9999;align-items:center;justify-content:center;">
+  <!-- Close button -->
+  <button id="lightbox-close" aria-label="إغلاق" style="position:absolute;top:20px;right:20px;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:26px;line-height:1;width:44px;height:44px;border-radius:50%;cursor:pointer;">✕</button>
+
+  <!-- Previous -->
+  <button id="lightbox-prev" aria-label="الصورة السابقة" style="position:absolute;left:20px;background:none;border:none;color:#fff;font-size:40px;cursor:pointer;">‹</button>
+
+  <img id="lightbox-img" src="" alt="" style="max-width:90%;max-height:90%;border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.6);" />
+
+  <!-- Next -->
+  <button id="lightbox-next" aria-label="الصورة التالية" style="position:absolute;right:20px;background:none;border:none;color:#fff;font-size:40px;cursor:pointer;">›</button>
+</div>
 
 <script>
-  /* فتح بطاقة رئيسية واحدة فقط */
-  function toggleMainCard(event, card) {
-    if (event.target.closest('.inner-events')) return;
-    document.querySelectorAll('.activity-card.expandable').forEach(c => {
-      if (c !== card) c.classList.remove('active');
+/* ================= INTERACTION LOGIC =================
+   المرحلة 1: إصلاح السلوك فقط (بدون تغيير التصميم أو المحتوى)
+   - فتح بطاقة رئيسية واحدة فقط
+   - فتح حدث داخلي يفتح البطاقة تلقائيًا
+   - منع القفز المزعج خصوصًا على الهاتف
+   - Scroll ناعم ومحسوب (Apple‑like)
+*/
+
+// فتح بطاقة رئيسية واحدة فقط
+function toggleMainCard(event, card) {
+  // إذا كان الضغط داخل الأحداث الداخلية لا نغلق البطاقة
+  if (event.target.closest('.inner-events')) return;
+
+  const willOpen = !card.classList.contains('active');
+
+  // إغلاق باقي البطاقات
+  document.querySelectorAll('.activity-card').forEach(c => {
+    if (c !== card) c.classList.remove('active');
+  });
+
+  // فتح / إغلاق البطاقة الحالية
+  card.classList.toggle('active');
+
+  // Scroll ناعم عند الفتح فقط
+  if (willOpen) {
+    requestAnimationFrame(() => {
+      card.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-    card.classList.toggle('active');
+  }
+}
+
+// فتح حدث داخلي واحد فقط داخل البطاقة
+function toggleInnerEvent(event, item) {
+  event.stopPropagation(); // منع تفعيل البطاقة الرئيسية مرتين
+
+  const mainCard = item.closest('.activity-card');
+
+  // التأكد من أن البطاقة الرئيسية مفتوحة
+  if (mainCard && !mainCard.classList.contains('active')) {
+    mainCard.classList.add('active');
   }
 
-  /* فتح حدث داخلي واحد فقط */
-  function toggleInnerEvent(event, item) {
-    event.stopPropagation();
-    const mainCard = item.closest('.activity-card');
-    if (mainCard && !mainCard.classList.contains('active')) {
-      mainCard.classList.add('active');
-    }
-    item.parentElement.querySelectorAll('li').forEach(el => {
-      if (el !== item) el.classList.remove('active');
+  const willOpen = !item.classList.contains('active');
+
+  // إغلاق باقي الأحداث داخل نفس البطاقة
+  item.parentElement.querySelectorAll('li').forEach(el => {
+    if (el !== item) el.classList.remove('active');
+  });
+
+  // فتح / إغلاق الحدث الحالي
+  item.classList.toggle('active');
+
+  // Scroll ناعم ومحسوب عند فتح الحدث
+  if (willOpen) {
+    requestAnimationFrame(() => {
+      item.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-    item.classList.toggle('active');
   }
+}
+  
+
+// ================= IMAGE LIGHTBOX =================
+let currentGallery = [];
+let currentIndex = 0;
+
+// فتح الصور الداخلية فقط (event-media)
+document.querySelectorAll('.event-media').forEach(gallery => {
+  const images = Array.from(gallery.querySelectorAll('img'));
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', e => {
+      e.stopPropagation(); // لا نغلق البطاقة
+      currentGallery = images;
+      currentIndex = index;
+      openLightbox(img.src);
+    });
+  });
+});
+
+function openLightbox(src){
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = src;
+  lightbox.style.display = 'flex';
+}
+
+function closeLightbox(){
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightbox.style.display = 'none';
+  lightboxImg.src = '';
+}
+
+function showNext(){
+  currentIndex = (currentIndex + 1) % currentGallery.length;
+  openLightbox(currentGallery[currentIndex].src);
+}
+
+function showPrev(){
+  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+  openLightbox(currentGallery[currentIndex].src);
+}
+
+// Controls
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+document.getElementById('lightbox-next').addEventListener('click', showNext);
+document.getElementById('lightbox-prev').addEventListener('click', showPrev);
+
+// إغلاق عند الضغط خارج الصورة
+const lightbox = document.getElementById('lightbox');
+lightbox.addEventListener('click', e => {
+  if(e.target === lightbox) closeLightbox();
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+  if(lightbox.style.display !== 'flex') return;
+  if(e.key === 'Escape') closeLightbox();
+  if(e.key === 'ArrowRight') showNext();
+  if(e.key === 'ArrowLeft') showPrev();
+});
+
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+  document.getElementById('lightbox-img').src = '';
+});
 </script>
-
 </body>
 </html>
