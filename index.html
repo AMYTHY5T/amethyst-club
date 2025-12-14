@@ -4,41 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ===== GLOBAL SEO (WORLD‑CLASS) ===== -->
-  <title>Amethystclub</title>
-  <meta name="description" content="Amethystclub — Student‑led medical club shaping future leaders through science, awareness, and humanitarian impact." />
-  <meta name="keywords" content="Amethystclub, medical club, student medical club, health awareness, Algeria" />
+  <!-- ===== SEO CORE ===== -->
+  <title>amethystclub | Amethyst Club – Student Medical Club in Algeria</title>
+  <meta name="description" content="amethystclub هو الموقع الرسمي لـ Amethyst Club، نادي طلابي طبي يقوده الطلبة ويهتم بالعلم، التوعية الصحية، والعمل الإنساني في الجزائر." />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://amythy5t.github.io/amethyst-club/" />
 
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="KVSVxCnRlR9q5j0cW4k0QfZcPaF4s-FUCz0FBE1ozqs" />
 
-  <!-- Open Graph (Social / Discover) -->
+  <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Amethystclub" />
-  <meta property="og:description" content="Shaping Future Medical Leaders" />
-  <meta property="og:site_name" content="Amethystclub" />
-  <meta property="og:image" content="https://amethystclub.github.io/images/og-cover.jpg" />
-  <meta name="twitter:image" content="https://amethystclub.github.io/images/og-cover.jpg" />
+  <meta property="og:title" content="amethystclub | Amethyst Club" />
+  <meta property="og:description" content="Student‑led medical club shaping future leaders through science, awareness, and humanitarian impact." />
+  <meta property="og:site_name" content="amethystclub" />
+  <meta property="og:url" content="https://amythy5t.github.io/amethyst-club/" />
+  <meta property="og:image" content="https://amythy5t.github.io/amethyst-club/images/og-cover.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Amethystclub" />
+  <meta name="twitter:title" content="amethystclub" />
   <meta name="twitter:description" content="Student‑led medical club creating impact through science and service." />
+  <meta name="twitter:image" content="https://amythy5t.github.io/amethyst-club/images/og-cover.jpg" />
 
-  <!-- Performance -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
-  <!-- ===== STRUCTURED DATA (SEO SNIPPETS) ===== -->
+  <!-- ===== STRUCTURED DATA ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Amethystclub",
-    "url": "https://amethystclub.github.io",
-    "logo": "https://amethystclub.github.io/images/logo.png",
+    "name": "amethystclub",
+    "alternateName": "Amethyst Club",
+    "url": "https://amythy5t.github.io/amethyst-club/",
+    "logo": "https://amythy5t.github.io/amethyst-club/images/logo.png",
     "sameAs": [
       "https://www.instagram.com/amethyst__club/",
       "https://www.tiktok.com/@amethyst__club"
@@ -50,28 +52,21 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Amethystclub",
-    "url": "https://amethystclub.github.io",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://amethystclub.github.io/activities.html",
-      "query-input": "required name=search_term_string"
-    }
+    "name": "amethystclub",
+    "url": "https://amythy5t.github.io/amethyst-club/"
   }
   </script>
 
   <style>
-  /* ================= GLOBAL DESIGN SYSTEM ================= */
   :root{
     --bg:#f8fafc;
     --surface:#ffffff;
     --ink:#0f172a;
     --muted:#475569;
-    --accent:#6b5ae0; /* Amethyst Violet */
+    --accent:#6b5ae0;
     --accent-soft:#f1f0ff;
     --line:#e5e7eb;
   }
-
   *{box-sizing:border-box;margin:0;padding:0;font-family:'Cairo',sans-serif}
   html{scroll-behavior:smooth}
   body{
@@ -80,8 +75,6 @@
     line-height:1.75;
     overflow-x:hidden;
   }
-
-  /* ================= HERO ================= */
   header{
     min-height:100vh;
     display:flex;
@@ -91,13 +84,11 @@
     padding:40px 20px;
     background:radial-gradient(circle at top,var(--accent-soft),#ffffff 70%);
   }
-
   .hero{max-width:1100px;margin:auto}
-
   .brand-mark{
     font-size:clamp(3.2rem,8vw,6rem);
     font-weight:900;
-    letter-spacing:.35em;
+    letter-spacing:.28em;
     background:linear-gradient(120deg,#6b5ae0,#d9467a,#f59e0b,#6b5ae0);
     background-size:300% 300%;
     -webkit-background-clip:text;
@@ -105,179 +96,35 @@
     animation:shimmer 6s ease infinite;
     margin-bottom:16px;
   }
-
-  @keyframes shimmer{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-  }
-
-  .brand-tagline{
-    font-size:.85rem;
-    letter-spacing:.45em;
-    font-weight:700;
-    color:var(--muted);
-    margin-bottom:36px;
-  }
-
-  .hero h1{
-    font-size:clamp(2.6rem,6vw,5rem);
-    margin-bottom:26px;
-  }
-
-  .hero p{
-    max-width:760px;
-    margin:0 auto 52px;
-    font-size:1.15rem;
-    color:var(--muted);
-  }
-
-  .cta-main{
-    display:inline-block;
-    padding:18px 52px;
-    border-radius:999px;
-    background:var(--accent);
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-    box-shadow:0 16px 40px rgba(107,90,224,.45);
-    transition:.3s ease;
-  }
+  @keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  .brand-tagline{font-size:.85rem;letter-spacing:.45em;font-weight:700;color:var(--muted);margin-bottom:36px}
+  .hero h2{font-size:clamp(2.6rem,6vw,5rem);margin-bottom:26px}
+  .hero p{max-width:760px;margin:0 auto 52px;font-size:1.15rem;color:var(--muted)}
+  .cta-main{display:inline-block;padding:18px 52px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;box-shadow:0 16px 40px rgba(107,90,224,.45);transition:.3s ease}
   .cta-main:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(107,90,224,.6)}
-
-  /* ================= SECTIONS ================= */
   section{padding:120px 20px}
-
-      /* Impact (Ultra‑Responsive, No Gaps) */
-  .impact{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-    gap:clamp(12px,2.5vw,24px);
-    text-align:center;
-  }
-  .impact > div{
-    padding:clamp(16px,3vw,28px) clamp(12px,3vw,20px);
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:clamp(14px,3vw,22px);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    min-height:clamp(120px,18vw,160px);
-  }
-  .impact h2{
-    font-size:clamp(2.2rem,6vw,3.6rem);
-    color:var(--accent);
-    line-height:1.1;
-    margin:0 0 6px 0;
-  }
-  .impact p{
-    color:var(--muted);
-    font-size:clamp(.85rem,2.5vw,.95rem);
-    margin:0;
-  }
-
-  /* Statement */
-  .statement{
-    max-width:900px;
-    margin:auto;
-    font-size:clamp(1.8rem,3vw,2.6rem);
-    font-weight:600;
-    text-align:center;
-  }
-
-  /* Activities teaser */
-  .activities{
-    max-width:1000px;
-    margin:auto;
-    text-align:center;
-  }
-  .activities h3{font-size:2.2rem;margin-bottom:22px}
+  .impact{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:clamp(12px,2.5vw,24px);text-align:center}
+  .impact>div{padding:clamp(16px,3vw,28px) clamp(12px,3vw,20px);background:var(--surface);border:1px solid var(--line);border-radius:clamp(14px,3vw,22px);display:flex;flex-direction:column;justify-content:center;min-height:clamp(120px,18vw,160px)}
+  .impact h3{font-size:clamp(2.2rem,6vw,3.6rem);color:var(--accent);line-height:1.1;margin:0 0 6px 0}
+  .impact p{color:var(--muted);font-size:clamp(.85rem,2.5vw,.95rem);margin:0}
+  .statement{max-width:900px;margin:auto;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:600;text-align:center}
+  .activities{max-width:1000px;margin:auto;text-align:center}
+  .activities h4{font-size:2.2rem;margin-bottom:22px}
   .activities p{color:var(--muted);margin-bottom:28px}
   .activities a{font-weight:600;color:var(--accent);text-decoration:none}
-
-  /* CTA */
   .cta{text-align:center}
-  .cta-links{
-    margin-top:48px;
-    display:flex;
-    justify-content:center;
-    gap:24px;
-    flex-wrap:wrap;
-}
-
-/* ===== ENTRY ANIMATION (APPLE‑LIKE) ===== */
-.cta-links a{
-    opacity:0;
-    transform:translateY(16px) scale(.96);
-    animation:fadeUp .8s cubic-bezier(.25,.8,.25,1) forwards;
-}
-
-.cta-links a:nth-child(1){animation-delay:.1s}
-.cta-links a:nth-child(2){animation-delay:.25s}
-.cta-links a:nth-child(3){animation-delay:.4s}
-
-@keyframes fadeUp{
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
-  .cta-links a{
-    padding:14px 34px;
-    border-radius:999px;
-    background:var(--ink);
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-    transition:background .3s ease, transform .3s ease, box-shadow .3s ease;
-}
-
-/* ===== Social Hover Effects (Brand Colors) ===== */
-.cta-links a[href*="instagram"]:hover{
-    background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
-    box-shadow:0 18px 40px rgba(253,29,29,.35);
-}
-
-.cta-links a[href*="tiktok"]:hover{
-    background:#000000;
-    box-shadow:0 18px 40px rgba(0,0,0,.45);
-}
-
-.cta-links a[href^="mailto"]:hover{
-    background:#2563eb;
-    box-shadow:0 18px 40px rgba(37,99,235,.35);
-}
-
-.cta-links a:hover{
-    transform:translateY(-4px);
-}
-  /* duplicate hover rule removed for consistency */
-
-  /* Footer */
-  footer{
-    padding:70px 20px;
-    text-align:center;
-    font-size:.85rem;
-    color:var(--muted);
-    border-top:1px solid var(--line);
-  }
-
-  /* Language switch */
+  .cta-links{margin-top:48px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+  .cta-links a{padding:14px 34px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;transition:.3s ease}
+  .cta-links a:hover{transform:translateY(-4px)}
+  footer{padding:70px 20px;text-align:center;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line)}
   .lang-switch{position:fixed;top:18px;left:18px;z-index:20}
-  .lang-switch button{
-    background:#fff;
-    border:1px solid var(--line);
-    padding:6px 14px;
-    border-radius:999px;
-    font-weight:600;
-    cursor:pointer;
-  }
+  .lang-switch button{background:#fff;border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-weight:600;cursor:pointer}
   </style>
 </head>
 <body>
+
+<!-- H1 مخفي لتحسين SEO -->
+<h1 style="position:absolute;left:-9999px;">amethystclub – Amethyst Club Student Medical Club</h1>
 
 <div class="lang-switch">
   <button onclick="toggleLang()">EN</button>
@@ -285,19 +132,19 @@
 
 <header>
   <div class="hero">
-    <div class="brand-mark" aria-label="Amethystclub brand">AMETHYST</div>
+    <div class="brand-mark">AMETHYSTCLUB</div>
     <div class="brand-tagline">SHINE IN HEALING</div>
-    <h1 id="heroTitle">نصنع قادة الطب<br>لا مجرد طلبة</h1>
-    <p id="heroText">Amethystclub هو مجتمع طلابي طبي يؤمن بأن المعرفة، التأثير، والخدمة هي أساس التغيير الحقيقي.</p>
-    <a href="activities.html" class="cta-main" id="heroBtn" aria-label="الانتقال إلى صفحة الأنشطة">استكشف الأنشطة</a>
+    <h2 id="heroTitle">نصنع قادة الطب<br>لا مجرد طلبة</h2>
+    <p id="heroText">amethystclub هو مجتمع طلابي طبي يؤمن بأن المعرفة، التأثير، والخدمة هي أساس التغيير الحقيقي.</p>
+    <a href="activities.html" class="cta-main" id="heroBtn">استكشف الأنشطة</a>
   </div>
 </header>
 
 <section>
   <div class="impact">
-    <div><h2>+10</h2><p id="i1">نشاط علمي وتوعوي</p></div>
-    <div><h2>+50</h2><p id="i2">طالب مستفيد</p></div>
-    <div><h2>+3</h2><p id="i3">حملات مجتمعية</p></div>
+    <div><h3>+10</h3><p id="i1">نشاط علمي وتوعوي</p></div>
+    <div><h3>+50</h3><p id="i2">طالب مستفيد</p></div>
+    <div><h3>+3</h3><p id="i3">حملات مجتمعية</p></div>
   </div>
 </section>
 
@@ -309,7 +156,7 @@
 
 <section>
   <div class="activities">
-    <h3 id="actTitle">التعلّم خارج القاعات</h3>
+    <h4 id="actTitle">التعلّم خارج القاعات</h4>
     <p id="actText">أنشطتنا تجارب حقيقية تربط المعرفة بالواقع، وتبني شخصية الطبيب قبل مهاراته.</p>
     <a href="activities.html" id="actLink">استكشف أنشطة النادي الطبية →</a>
   </div>
@@ -325,7 +172,7 @@
 </section>
 
 <footer>
-  © 2025 Amethystclub — All rights reserved
+  © 2025 amethystclub — All rights reserved
 </footer>
 
 <script>
@@ -335,7 +182,7 @@ function toggleLang(){
     document.documentElement.lang='en';
     document.documentElement.dir='ltr';
     heroTitle.innerHTML='Shaping Future Medical Leaders';
-    heroText.innerText='Amethystclub is a student‑led medical community driven by science, impact, and service.';
+    heroText.innerText='amethystclub is a student‑led medical community driven by science, impact, and service.';
     heroBtn.innerText='Explore Activities';
     i1.innerText='Scientific & awareness activities';
     i2.innerText='Students impacted';
